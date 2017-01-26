@@ -7,19 +7,18 @@
 # if it is, give it a label Super
 
 #2nd refactor with method
-
-def fizzbuzz(numbers)
-  numbers.each do |number|
+def fizzbuzz(number)
   message = ""
   message += "Super" if number % 7 == 0
   message += "Fizz" if number % 3 == 0
   message += "Buzz" if number % 5 == 0
-  puts message == "" ? number : message
-  end
+  return  message == "" ? number : message
 end
 
-fizzbuzz(0..1000)
-
+puts"Please enter a number to check its SuperFizzBuzzyness."
+number = gets.chomp.to_i
+answer = fizzbuzz(number)
+puts answer
 
 
 #1st refactor
